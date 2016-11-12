@@ -50,7 +50,7 @@ void print_avg(int *a, size_t size) {
 
 void main() {
     int numbers[12] = {5, 4, 3, 5, 6, 7, 9, 10, 15, -12, 2, 0};
-    int size = (int)(sizeof(numbers) / sizeof(int));
+    int size = sizeof(numbers) / sizeof(int);
     print_entirety(numbers, size);
     print_smallest(numbers, size);
     print_largest(numbers, size);

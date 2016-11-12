@@ -133,7 +133,7 @@ void main() {
             case PRINTAVG:          
                 print_avg(slist, entry_total);
                 break;
-            case LISTFAIL:          
+            case LISTFAIL:
                 list_fail(slist, entry_total);
                 break;
             case PRINTMAX:          
