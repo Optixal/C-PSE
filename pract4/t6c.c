@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
     if (argc < 2) return 1;
     int n = atoi(argv[1]);
     int array[n][n];
-    int r = 0, c = 0, counter = 0, direction = RIGHT, rbound = n - 1, cbound = n - 1;
+    int r = 0, c = 0, counter = 0, direction = RIGHT, bound = n - 1;
     while (counter < n * n) {
         array[r][c] = counter + 1;
         counter++;
@@ -27,16 +27,15 @@ int main(int argc, char *argv[]) {
                 r--;
                 break;
         }
-        if (r == (n - 1) - rbound && c == cbound) {
+        if (r == (n - 1) - bound && c == bound) {
             direction = DOWN;
-        } else if (r == rbound && c == cbound) {
+        } else if (r == bound && c == bound) {
             direction = LEFT;
-        } else if (r == rbound && c == (n - 1) - cbound) {
+        } else if (r == bound && c == (n - 1) - bound) {
             direction = UP;
-        } else if (r == n - rbound && c == (n - 1) - cbound) {
+        } else if (r == n - bound && c == (n - 1) - bound) {
             direction = RIGHT;
-            rbound--;
-            cbound--;
+            bound--;
         }
     }
     int i, j;
