@@ -1,0 +1,3 @@
+Char Count: 35
+Line Count: 2
+Word Count: 9
